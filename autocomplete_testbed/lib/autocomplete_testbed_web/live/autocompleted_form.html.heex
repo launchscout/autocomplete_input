@@ -1,0 +1,6 @@
+<h1>Autocompleted Form</h1>
+
+<.simple_form for={%{}} phx-change="autocomplete-search">
+  <label for="autocomplete-input">Autocomplete Input</label>
+  <.autocomplete_input id="autocomplete-input" options={@options} value="1"name="autocomplete-input" display_value="label" min_length={3} />
+</.simple_form>

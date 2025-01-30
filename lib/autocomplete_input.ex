@@ -1,16 +1,25 @@
 defmodule AutocompleteInput do
-
   use Phoenix.Component
 
-  attr :options, :list, required: true
-  attr :id, :string, required: true
-  attr :name, :string, required: true
-  attr :display_value, :string, required: true
-  attr :value, :string, required: true
-  attr :min_length, :integer, required: false
+  attr(:options, :list, required: true)
+  attr(:id, :string, required: true)
+  attr(:name, :string, required: true)
+  attr(:display_value, :string, required: true)
+  attr(:value, :string, required: true)
+  attr(:min_length, :integer, required: false)
+
   def autocomplete_input(assigns) do
     ~H"""
-    <autocomplete-input items={to_items(@options)} value={@value} display-value={@display_value} min-length={@min_length} phx-hook="PhoenixCustomEventHook" phx-send-events="autocomplete-search,autocomplete-commit" id="autocomplete-input">
+    <autocomplete-input
+      items={to_items(@options)}
+      name={@name}
+      value={@value}
+      display-value={@display_value}
+      min-length={@min_length}
+      phx-hook="PhoenixCustomEventHook"
+      phx-send-events="autocomplete-search,autocomplete-commit"
+      id={@id}
+    >
     </autocomplete-input>
     """
   end

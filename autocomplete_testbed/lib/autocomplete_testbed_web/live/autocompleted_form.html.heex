@@ -1,6 +1,9 @@
 <h1>Autocompleted Form</h1>
 
-<.simple_form for={%{}} phx-change="autocomplete-search">
+Selected value: <div id="selected-value"><%= @selected_value %></div>
+
+<.simple_form for={%{}} phx-submit="submit" phx-change="change">
   <label for="autocomplete-input">Autocomplete Input</label>
-  <.autocomplete_input id="autocomplete-input" options={@options} value="1"name="autocomplete-input" display_value="label" min_length={3} />
+  <.autocomplete_input id="autocomplete-input" options={@options} value="1" name="autocomplete-input" display_value="label" min_length={3} />
+  <.button type="submit">Submit</.button>
 </.simple_form>

@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@launchscout/autocomplete-input": "^0.3.0",
+    "@launchscout/autocomplete-input": "file:../../../simple-autocomplete",
     "phoenix-custom-event-hook": "^0.0.6"
   }
 }

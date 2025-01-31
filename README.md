@@ -60,7 +60,7 @@ The component sends two custom events that you can handle in your LiveView:
 
 The component can be used within a form as follows:
 
-```htmleex
+```html
 <h1>Autocompleted Form</h1>
 
 Selected fruit: <div id="selected-fruit"><%= @results[:fruit] %></div>

@@ -125,7 +125,7 @@ This example is contained in the `autocomplete_testbed` folder and is used by th
 
 Here's what it looks like in action:
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/1cf163f4fe544dbbae19c1660d19b9a6?sid=03cce3e9-d16f-4bae-bb65-360a4fc8cada" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+[![Autcomplete Demo](https://cdn.loom.com/sessions/thumbnails/1cf163f4fe544dbbae19c1660d19b9a6-a9bcaebe5225e9a9-full-play.gif)](https://www.loom.com/share/1cf163f4fe544dbbae19c1660d19b9a6?sid=c2d44f17-a0f9-4b5c-9771-da9b45b53edd)
 
 ## `autocomplete-input`
 

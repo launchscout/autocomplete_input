@@ -20,3 +20,6 @@ config :phoenix_live_view,
 config :wallaby,
   otp_app: :autocomplete_testbed,
   base_url: "http://localhost:4002"
+  # chromedriver: [
+  #   headless: false
+  # ]

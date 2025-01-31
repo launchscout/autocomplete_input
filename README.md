@@ -125,8 +125,9 @@ This example is contained in the `autocomplete_testbed` folder and is used by th
 
 Here's what it looks like in action:
 
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/1cf163f4fe544dbbae19c1660d19b9a6?sid=03cce3e9-d16f-4bae-bb65-360a4fc8cada" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ## `autocomplete-input`
 
-For more details on the custom element this component wraps including styling information, see the [autocomplete-input] repo.
+For more details on the custom element this component wraps including styling information, see the [autocomplete-input repo](https://github.com/launchscout/autocomplete-input).
 

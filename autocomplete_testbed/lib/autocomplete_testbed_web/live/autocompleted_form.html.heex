@@ -6,11 +6,11 @@ Selected animal: <div id="selected-animal"><%= @results[:animal] %></div>
 <.simple_form for={%{}} phx-submit="submit" phx-change="change">
   <div>
     <label for="autocomplete-input">Fruit</label>
-    <.autocomplete_input id="autocomplete-input" options={@fruit_options} value="1" name="fruit" display_value="Choose a fruit" min_length={3} />
+    <.autocomplete_input id="autocomplete-input" options={@fruit_options} value="apple" name="fruit" display_value="Choose a fruit" min_length={3} />
   </div>
   <div>
     <label for="autocomplete-input">Animal</label>
-    <.autocomplete_input id="autocomplete-input" options={@animal_options} value="1" name="animal" display_value="Choose an animal" min_length={3} />
+    <.autocomplete_input id="autocomplete-input" options={@animal_options} value="dog" name="animal" display_value="Choose an animal" min_length={3} />
   </div>
   <.button type="submit">Submit</.button>
 </.simple_form>

@@ -1,0 +1,32 @@
+name: Trigger Integration Tests
+
+on: push
+
+jobs:
+  test:
+    name: Build and run tests
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout project
+      uses: actions/checkout@v3
+    - name: Set up Elixir
+      uses: erlef/setup-beam@v1
+      with:
+        otp-version: '26.2.1' # Define the OTP version [required]
+        elixir-version: '1.17.2-otp-26' # Define the elixir version [required]
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Install dependencies
+      run: mix deps.get
+    - name: Install autocomplete_testbed dependencies
+      run: mix deps.get
+      working-directory: ./autocomplete_testbed
+    - name: install autocomplete_testbed assets
+      run: npm install
+      working-directory: autocomplete_testbed/assets
+    - name: build autocomplete_testbed javascript
+      run: mix assets.build
+      working-directory: ./autocomplete_testbed
+    - name: Run elixir tests
+      run: mix test
+      working-directory: ./autocomplete_testbed

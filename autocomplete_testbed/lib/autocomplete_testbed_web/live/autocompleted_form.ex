@@ -18,9 +18,23 @@ defmodule AutocompleteTestbedWeb.AutocompletedForm do
     {:noreply, socket |> assign(animal_options: @animal_options |> Enum.filter(&label_matches?(value, &1)))}
   end
 
-  def handle_event("autocomplete-commit", _params, socket) do
-    {:noreply, socket |> assign(options: [])}
+  def handle_event("autocomplete-commit", %{"name" => "animal"}, socket) do
+    {:noreply, socket |> assign(animal_options: [])}
   end
+
+  def handle_event("autocomplete-commit", %{"name" => "fruit"}, socket) do
+    {:noreply, socket |> assign(fruit_options: [])}
+  end
+
+  def handle_event("autocomplete-close", %{"name" => "animal"}, socket) do
+    {:noreply, socket |> assign(animal_options: [])}
+  end
+
+  def handle_event("autocomplete-close", %{"name" => "fruit"}, socket) do
+    {:noreply, socket |> assign(fruit_options: [])}
+  end
+
+  def handle_event("autocomplete-open", _params, socket), do: {:noreply, socket}
 
   def handle_event("change", %{"autocomplete-input" => value}, socket) do
     IO.inspect(value, label: "change")

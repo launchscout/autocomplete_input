@@ -21,4 +21,17 @@ defmodule AutocompleteTestbedWeb.AutocompleteTest do
     session |> click(css("button", text: "Submit")) |> assert_has(css("#selected-fruit", text: "nanna"))
   end
 
+  feature "doing the same search twice", %{session: session} do
+    session
+    |> visit("/autocompleted-form")
+    |> find(css("autocomplete-input[name='animal']"))
+    |> shadow_root()
+    |> click(css("span", text: "Choose an animal"))
+    |> fill_in(css("input"), with: "cat")
+    |> assert_has(css("li", text: "Cat"))
+    |> click(css(".cancel-icon"))
+    |> click(css("span", text: "Choose an animal"))
+    |> fill_in(css("input"), with: "cat")
+    |> assert_has(css("li", text: "Cat"))
+  end
 end

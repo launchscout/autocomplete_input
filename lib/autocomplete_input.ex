@@ -17,7 +17,7 @@ defmodule AutocompleteInput do
       display-value={@display_value}
       min-length={@min_length}
       phx-hook="PhoenixCustomEventHook"
-      phx-send-events="autocomplete-search,autocomplete-commit"
+      phx-send-events="autocomplete-search,autocomplete-commit,autocomplete-close,autocomplete-open"
       id={@id}
     >
     </autocomplete-input>

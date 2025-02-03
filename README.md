@@ -4,7 +4,7 @@ This is an autocomplete component for Phoenix LiveView. It uses a form associate
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
+The [hex package](https://hex.pm/packages/autocomplete_input) can be installed
 by adding `autocomplete_input` to your list of dependencies in `mix.exs`:
 
 ```elixir

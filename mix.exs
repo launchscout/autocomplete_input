@@ -7,7 +7,16 @@ defmodule AutocompleteInput.MixProject do
       version: "0.1.0",
       elixir: "~> 1.17",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      description: "A autocomplete input component for Phoenix LiveView",
+      package: [
+        licenses: ["MIT"],
+        links: %{"Github" => "https://github.com/launchscout/autocomplete_input"}
+      ],
+      docs: [
+        main: "readme",
+        extras: ["README.md"]
+      ]
     ]
   end
 

@@ -39,7 +39,7 @@ The `AutocompleteInput.autocomplete_input` is a standard functional component th
 
 * `id` - (Required) The unique identifier for the input element
 * `name` - (Required) The form field name that will be used in params
-* `options` - (Required) A list of options in the same form as `
+* `options` - (Required) A list of options in the same form as `options_for_select`, eg `{label, value}`
 * `value` - (Optional) The initially selected value
 * `display_value` - (Optional) Text shown when the element renders in the intial closed state. An edit icon will be displayed next to it
 * `min_length` - (Optional, default: 1) Minimum number of characters required before showing suggestions
@@ -52,9 +52,15 @@ The component sends two custom events that you can handle in your LiveView:
   * `name` - The name of the field
   * `query` - The current search text entered by the user
 
-* `autocomplete-commit` - Triggered when an option is selected. It is normally expected you would clear the list of options here. It will contain the following:
+* `autocomplete-commit` - Triggered when an option is selected. It is normally expected you would clear the list of options here. The event payload will contain the following:
   * `name` The name of the field
   * `value` The selected value
+
+* `autocomplete-open` - Triggered when an autocomplete is opened. The event payload will contain
+  * `name` The name of the field
+
+* `autocomplete-close` - Triggered when an autocomplete is cloase. It is normally expected that you will clear the list of options here. The event payload will contain
+  * `name` The name of the field
 
 ## Example
 
